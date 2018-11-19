@@ -1,6 +1,8 @@
+;*************************************************************
 ; FINAL
 ; UVG  #17078
 ;PRUEBA B
+;*************************************************************
     #include "p16f887.inc"
 
 ; CONFIG1
@@ -508,7 +510,7 @@ RECIBIR_ENTER
     
 UART    
     BANKSEL TXSTA
-    BCF	    TXSTA, SYNC		    ; ASINCRï¿½NO
+    BCF	    TXSTA, SYNC		    ; ASINCRÓNO
     BSF	    TXSTA, BRGH		    ; HIGH SPEED
     BANKSEL BAUDCTL
     BSF	    BAUDCTL, BRG16		    ; 16 BITS BAURD RATE GENERATOR
@@ -519,7 +521,7 @@ UART
     BANKSEL RCSTA
     BSF	    RCSTA, SPEN		    ; HABILITAR SERIAL PORT
     BCF	    RCSTA, RX9		    ; SOLO MANEJAREMOS 8BITS DE DATOS
-    BSF	    RCSTA, CREN		    ; HABILITAMOS LA RECEPCIï¿½N 
+    BSF	    RCSTA, CREN		    ; HABILITAMOS LA RECEPCIÓN 
     BANKSEL TXSTA
     BSF	    TXSTA, TXEN		    ; HABILITO LA TRANSMISION
     
